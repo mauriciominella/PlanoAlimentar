@@ -1,0 +1,6 @@
+﻿body {
+}
+
+.ui-listview > li p {
+  white-space: normal;
+}
