@@ -13,6 +13,22 @@
         document.addEventListener( 'resume', onResume.bind( this ), false );
         
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
+
+        var date = new Date();
+        var hour = date.getHours();
+        var minute = date.getMinutes();
+
+
+        if (hour > 7)
+            $.mobile.silentScroll($("#liCafeDaManha").offset().top);
+
+        if(hour > 9)
+            $.mobile.silentScroll($("#liLancheDaManha").offset().top);
+
+        if(hour > 11)
+            $.mobile.silentScroll($("#liAlmoco").offset().top);
+
+        
     };
 
     function onPause() {
